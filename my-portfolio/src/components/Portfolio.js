@@ -6,10 +6,26 @@ import Resume from "./pages/Resume";
 import Nav from "./Nav";
 
 function Portfolio() {
+    const [currentPage, setCurrentPage] = useState("AboutMe");
+
+
+    const renderPortfolio = () => {
+        if (currentPage === "AboutMe") {
+            return <AboutMe/>;
+        } else if (currentPage === "MyProjects") {
+            return <MyProjects/>;
+        } else if (currentPage === "ContactMe") {
+            return <ContactMe/>;
+        } else if (currentPage === "Resume") {
+            return <Resume/>;
+        }
+    };
 
     return (
         <div className="container">
-            <p> This is a test to render the portfolio page </p>
+            <p> This is a test to render the page </p>
+            <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            {renderPortfolio()}
         </div>
     );
 
