@@ -4,6 +4,7 @@ import MyProjects from "./pages/MyProjects";
 import ContactMe from "./pages/ContactMe";
 import Resume from "./pages/Resume";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function Portfolio() {
     const [currentPage, setCurrentPage] = useState("AboutMe");
@@ -26,6 +27,7 @@ function Portfolio() {
             <p> This is a test to render the page </p>
             <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
             {renderPortfolio()}
+            <Footer />
         </div>
     );
 
