@@ -24,7 +24,6 @@ function Portfolio() {
 
     return (
         <div className="container">
-            <p> This is a test to render the page </p>
             <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
             {renderPortfolio()}
             <Footer />
